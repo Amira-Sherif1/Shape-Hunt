@@ -2,7 +2,8 @@
 #include <iostream>
 #include <sstream>
 #include <cmath>
-
+#include <cstdlib>
+#include <ctime>
 #include "CMUgraphicsLib\CMUgraphics.h"
 #include "CMUgraphicsLib\auxil.h"	// where Pause is found
 
@@ -16,17 +17,13 @@ void drawhome(window& w, color c, int x, int y, int size) {
 
 int main()
 {
-
-	//Create an object of controller
-/*	game Game;
-
-	Game.run();
-	return 0;*/
-
+	int crand(time(0));
+	int size = (rand() + 5) % (400 - 5 + 1);
+	int x1 = (rand() + 5) % (1205 - size+1);
+	int y1 = (rand() + size / 2) % (705 - (size / 2) + 1);
 	window w(1200, 700, 5, 5);
-
-	drawhome(w, RED, 700, 100, 60);
-	w.SetBrush(BLUE);
-	//w.DrawRectangle(100, 100, 300, 100 + 150, FILLED);
+	drawhome(w, RED, x1, y1, size);
+	
+	
 	
 }
