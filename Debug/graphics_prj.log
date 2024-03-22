@@ -1,4 +1,0 @@
-﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  demo.cpp
-D:\year1 sems2\cie 101 C++\project\Shape-Hunt\demo.cpp(20,11): warning C4244: 'initializing': conversion from 'time_t' to 'int', possible loss of data
-  graphics_prj.vcxproj -> D:\year1 sems2\cie 101 C++\project\Shape-Hunt\Debug\graphics_prj.exe
