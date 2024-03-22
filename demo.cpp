@@ -7,11 +7,8 @@
 #include "CMUgraphicsLib\auxil.h"	// where Pause is found
 
 void drawhome(window& w, color c, int x, int y, int size) {
-	w.SetPen(c);
 	w.SetBrush(c);
-
 	w.DrawRectangle(x, y, x + size, y+size, FILLED);
-
 	w.SetBrush(BLUE);
 	w.DrawTriangle(x, y, x + size, y, x + size / 2, y - size / 2, FILLED);
 }
