@@ -1,0 +1,20 @@
+void drawpyramid(window& w, int x, int y, int height, int baseLength) {
+   
+    w.DrawLine(x, y, x + baseLength, y);
+    w.DrawLine(x, y, x + baseLength / 2, y - height);
+    w.DrawLine(x + baseLength, y, x + baseLength / 2, y - height);
+    w.DrawLine(x + baseLength / 2, y - height, x, y);
+    w.DrawLine(x + baseLength / 2, y - height, x + baseLength, y);
+
+    int rectWidth = baseLength / 4; 
+    w.DrawRectangle(x + baseLength / 2 - rectWidth / 2, y, rectWidth, height);
+}
+
+int main() {
+    window w(800, 600);
+    w.SetPen(BLACK, 2);
+
+    drawpyramid(w, 300, 400, 200, 200);
+
+    return 0;
+}
