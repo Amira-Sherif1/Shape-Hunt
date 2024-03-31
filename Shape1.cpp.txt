@@ -1,0 +1,99 @@
+#include<iostream>
+#include <cmath>
+#include <cstdlib>
+#include "CMUgraphicsLib\CMUgraphics.h"
+#include "CMUgraphicsLib\auxil.h"
+
+using namespace std;
+void clearWindow(window& inwind)
+{
+	inwind.SetPen(WHITE);
+	inwind.SetBrush(WHITE);
+	inwind.DrawRectangle(0, 0, inwind.GetWidth(), inwind.GetHeight());
+}
+void drawCone(window& w, int x1, int y1,  color c1, color c2,int size)
+{
+
+
+	/// THE CONE
+
+	//reference
+	x1 = size + rand() % (1000); // these determine the distance from the fram
+	y1 = size + rand() % (1000);
+	//
+	int rad = rand() % (size); //radius =<distance from the frame
+	//int dis = 100 + rand() % (1000);//the range inwhich the shape move randomly 
+	int height =  + rand() % (1000);
+
+
+	w.SetBrush(c1);
+	w.SetPen(c1, 5);
+
+	w.DrawTriangle(x1 - rad + 5, y1, x1 + rad + 5, y1, x1, height + y1);
+
+
+	w.SetBrush(c2);
+	w.SetPen(c2, 5);
+	w.DrawCircle(x1, y1, rad);
+
+}
+
+//void detectKeybourd(window& inwind);
+
+
+
+int main()
+{
+	window w(1200, 1200, 5, 5);
+	keytype ktInput;
+	char key;
+	ktInput = w.GetKeyPress(key);
+	if (ktInput == ASCII)
+	{
+		if (key == 'C') { drawCone(w, 30, 30, BROWN, PINK, 100); }
+		else if (key == 'Q') { clearWindow(w); }
+	}
+	
+	//int x;
+	//int y;
+	//int z = pow(x * x + y * y, 0.5);
+	// clear
+	
+	
+
+	
+	
+	
+
+	// THE ROCKET
+	//w.DrawRectangle(40,40,)
+		
+
+	
+
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+	
+	
+	
+
+
+}
